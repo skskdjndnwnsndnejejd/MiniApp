@@ -1,0 +1,233 @@
+/* === 🎁 PortHub - Стиль === */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+  background: #2a0033;
+  color: white;
+}
+
+/* 🌇 Основная сцена */
+.scene {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* 🌅 Небо */
+.sky {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  top: 0;
+  background: linear-gradient(to bottom, #ffb347, #a26df2);
+}
+
+/* ☀️ Солнце */
+.sun {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  width: 140px;
+  height: 140px;
+  background: radial-gradient(circle, #ffd75e, #ffbb00);
+  border-radius: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 80px 20px rgba(255, 230, 140, 0.6);
+  animation: sunPulse 8s infinite;
+}
+@keyframes sunPulse {
+  0%, 100% { box-shadow: 0 0 80px 20px rgba(255,230,140,0.6); }
+  50% { box-shadow: 0 0 120px 40px rgba(255,230,140,0.9); }
+}
+
+/* 🕊️ Птицы */
+.birds::before {
+  content: "🕊️🕊️🕊️";
+  position: absolute;
+  font-size: 1.2rem;
+  top: 8%;
+  left: 5%;
+  animation: birdsFly 20s linear infinite;
+}
+@keyframes birdsFly {
+  0% { transform: translateX(0); opacity: 1; }
+  100% { transform: translateX(100vw); opacity: 0; }
+}
+
+/* 🌊 Море */
+.sea {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 35%;
+  background: linear-gradient(to top, #1a0059, #3b00b3);
+}
+
+/* 🌉 Мост */
+.bridge {
+  position: absolute;
+  bottom: 35%;
+  width: 100%;
+  height: 20px;
+  background: #2b1a47;
+  border-top: 4px solid #4d2a72;
+}
+
+/* 🚢 Пароход */
+.ship {
+  position: absolute;
+  bottom: 32%;
+  left: -120px;
+  width: 100px;
+  height: 40px;
+  background: #c23a3a;
+  border-radius: 5px;
+  animation: shipMove 60s linear infinite;
+}
+@keyframes shipMove {
+  0% { left: -120px; }
+  100% { left: 110%; }
+}
+
+/* 🦆 Утка */
+.car-duck {
+  position: absolute;
+  bottom: 25%;
+  width: 100px;
+  height: 60px;
+  background: url('https://i.imgur.com/psDXlXH.png') no-repeat center/contain;
+  animation: duckMove 30s linear infinite;
+}
+@keyframes duckMove {
+  0% { left: -120px; }
+  100% { left: 110%; }
+}
+
+/* 🏗️ Кран */
+.port-crane {
+  position: absolute;
+  right: 10%;
+  bottom: 35%;
+  width: 60px;
+  height: 120px;
+  background: #b73131;
+  animation: craneMove 12s ease-in-out infinite alternate;
+}
+@keyframes craneMove {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-20px); }
+}
+
+/* 🛣️ Трасса */
+.road-arc {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  width: 200%;
+  height: 200px;
+  background: radial-gradient(circle at top, transparent 60%, #2d213a 61%);
+  transform: translateX(-50%) rotate(180deg);
+}
+
+/* 🧭 Баннер */
+.banner {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  padding-top: 10px;
+}
+.banner h1 {
+  font-size: 2rem;
+  margin: 0;
+  color: #fff7b2;
+  text-shadow: 2px 2px #ff66cc;
+}
+.banner .gift-logo {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+}
+.banner img {
+  width: 60px;
+  filter: drop-shadow(0 0 8px #ffcc00);
+}
+.banner .lid {
+  position: absolute;
+  width: 60px;
+  height: 10px;
+  top: 0;
+  background: gold;
+  border-radius: 4px;
+  animation: lidJump 6s ease-in-out infinite;
+}
+@keyframes lidJump {
+  0%, 90% { transform: translateY(0); }
+  95% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+/* 🔹 Вкладки */
+.tabs {
+  position: absolute;
+  top: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  background: rgba(0,0,0,0.3);
+  border-top: 1px solid rgba(255,255,255,0.2);
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.tab-btn {
+  background: transparent;
+  border: none;
+  color: #ffe97a;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+.tab-btn.active {
+  color: #fff;
+  text-shadow: 0 0 6px #ffdf4a;
+}
+.balance {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  font-weight: bold;
+  color: #fff7a0;
+}
+
+/* 📦 Контент */
+.content-area {
+  position: absolute;
+  top: 130px;
+  bottom: 60px;
+  width: 100%;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+/* ➕ Кнопка добавить */
+.floating-add {
+  position: absolute;
+  right: 20px;
+  bottom: 70px;
+  background: #ffcc00;
+  color: #222;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 1.8rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  cursor: pointer;
+  transition: 0.2s;
+}
+.floating-add:hover {
+  transform: scale(1.1);
+}
