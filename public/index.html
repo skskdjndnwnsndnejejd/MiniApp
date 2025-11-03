@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🎁 PortHub</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="scene">
+    <!-- 🌅 Фон -->
+    <div class="sky"></div>
+    <div class="sun"></div>
+    <div class="birds"></div>
+    <div class="sea"></div>
+    <div class="bridge"></div>
+    <div class="road-arc"></div>
+    <div class="car-duck"></div>
+    <div class="port-crane"></div>
+    <div class="ship"></div>
+
+    <!-- 🧭 Баннер -->
+    <div class="banner">
+      <div class="gift-logo">
+        <img src="https://cdn-icons-png.flaticon.com/512/2544/2544085.png" alt="gift" />
+        <div class="lid"></div>
+      </div>
+      <h1>🎁 PortHub</h1>
+      <p>Наслаждайся закатом и своими NFT-подарками</p>
+    </div>
+
+    <!-- 🔹 Навигация -->
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="nfts">NFT's</button>
+      <button class="tab-btn" data-tab="mygifts">My Gifts</button>
+      <button class="tab-btn" data-tab="terms">Terms</button>
+      <span class="balance" id="balance">TON: 0.00 +</span>
+    </div>
+
+    <!-- 🔸 Контент -->
+    <div id="content" class="content-area">
+      <!-- NFT каталог будет подгружаться через script.js -->
+    </div>
+
+    <!-- ➕ Кнопка создания лота -->
+    <button class="floating-add" id="addBtn">＋</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
