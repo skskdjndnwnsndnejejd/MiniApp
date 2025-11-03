@@ -1,0 +1,28 @@
+{
+  "name": "porthub",
+  "version": "1.0.0",
+  "description": "🎁 PortHub — Telegram Mini-App для NFT подарков и TON баланса",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "telegram",
+    "webapp",
+    "mini-app",
+    "NFT",
+    "TON",
+    "porthub"
+  ],
+  "author": "Akajsnndnf",
+  "license": "MIT",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.46.0",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "node-fetch": "^3.3.2"
+  }
+}
